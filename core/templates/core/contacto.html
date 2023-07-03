@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta content="dark" name="color-scheme">
+    <meta content="origin" name="referrer">
+    <meta name="author" content="">
+    <meta name="description" content="actividad-programacion-web">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contacto</title>
+    <link 
+        rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet"  href="{% static 'core/css/style.css'%}" type="text/css">
+      </head>
+<body id="fondo">
+  <nav class="navbar navbar-expand navbar-dark bg-dark" id="navcolor">
+    <div class="container">
+    <a class="navbar-brand" href="{% url 'home' %}">Inicio</a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+        <a class="nav-link" href="{% url 'producto' 'ins' -1 %}">Productos</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="{% url 'tienda_producto' %}">Tienda</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+        </li>
+        <li class="nav-item">
+        <a href="{% url 'sesion' %}" class="btn btn-outline-success">Login</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'registro' %}" class="btn btn-outline-info">Registro</a>
+        </li>
+    </ul>
+    </div>
+</nav>
+<!-- formulario de contacto-->
+<div class="container my-5" >
+    <form id="registrocolor">
+      <h2>Datos de contacto</h2>
+            <div class="form-row">
+              <div class="col">
+                <label>Nombre</label>
+                <input type="text" class="form-control" placeholder="jordan">
+              </div>
+              <div class="col">
+                <label>Apellido</label>
+                <input type="text" class="form-control" placeholder="23">
+              </div>
+            </div>
+        <div class="form-row">
+          <div class="form-group col-md-7">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="user@gmail.com">
+          </div>
+          <div class="form-group col-mb-5">
+            <label for="numero">Celular</label>
+            <input type="tel" class="form-control" id="numero" name="Numero">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="direccion">Dirección</label>
+          <input type="text" class="form-control" id="direccion" placeholder="Calle siempre viva ">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="ciudad">Ciudad</label>
+            <input type="text" class="form-control" id="Ciudad">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="region">Región</label>
+            <select id="Regiones"></select>
+          </div>
+        </div>
+        <div class="form-group col-6" >
+            <label for="mensaje">Mensaje</label>
+            <textarea class="form-control" id="mensaje" rows="4"></textarea>
+          </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+      </form>
+</div>
+<script src="{% static 'core/js/scrips.js'%}" ></script>
+<script src="{% static 'core/js/api.js'%}" ></script>
+
+</body>
+</html>

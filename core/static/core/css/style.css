@@ -1,0 +1,82 @@
+#navcolor {
+  background: rgb(0, 0, 0);
+  background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+#navletra {
+  color: #00ff00; /* Verde brillante */
+}
+
+
+
+.carousel-item img {
+  width: 500px;
+  height: 400px;
+}
+
+#registrocolor {
+  height: 610px;
+  width: 750px;
+  padding: 30px;
+  background: rgb(0, 0, 0);
+  background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#logincolor {
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(0, 0, 0);
+  background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#error {
+  color: #ffffff; /* Blanco */
+  background-color: #ff0000; /* Rojo */
+  height: auto;
+  width: auto;
+}
+
+#success {
+  color: #ffffff; /* Blanco */
+  background-color: #00ff00; /* Verde brillante */
+  height: auto;
+  width: auto;
+}
+
+#fondo {
+  background: rgb(0, 0, 0);
+  background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 75%);
+}
+
+
+
+#contenedorgr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #00ff00; /* Verde brillante */
+}
+
+#contenedorpq {
+  width: 30%;
+}
+

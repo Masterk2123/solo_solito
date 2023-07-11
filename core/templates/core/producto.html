@@ -23,7 +23,13 @@
             <a class="nav-link" href="{% url 'producto' 'ins' -1 %}">Productos</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="{% url 'vehiculo' 'ins' -1 %}">Vehiculos</a>
+            </li>
+            <li class="nav-item">
             <a class="nav-link" href="{% url 'tienda_producto' %}">Tienda</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'vehiculo_tienda' %}">Servicio</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
@@ -77,7 +83,7 @@
                     <td>{{ pro.id_producto }}</td>
                     <td>{{ pro.producto }}</td>
                     <td>{{ pro.detalles }}</td>
-                    <td><img src="/media/{{ pro.imagen }}" class="mini_auto" alt=""></td>
+                    <td><img src="/media/{{ pro.imagen }}" class="mini_auto" alt="" height="140px" width="180px"></td>
                     <td>{{ pro.categoria }}</td>
                     <td><a href="{% url 'producto' 'upd' pro.id_producto %}" 
                         class="btn btn-primary btn-sm boton_chico">Editar</a></td>
@@ -89,69 +95,10 @@
         </table>
         {% endif %}
         <br>
-        <a href="{% url 'poblar_bd' %}" class="btn btn-info btn-sm">RECARGAR PRODUCTOS</a>
+        <a href="{% url 'poblar_pro' %}" class="btn btn-info btn-sm">RECARGAR PRODUCTOS</a>
         <a href="http://127.0.0.1:8000/admin" class="btn btn-info btn-sm">Administración</a>
         <a href="{% url 'home' %}" class="btn btn-info btn-sm">Inicio</a>
-    </div>
-    <div class="container">
-        <h1 style="text-align: center !important;">
-            Mantenedor de Vehículos
-        </h1>
-        {% if form %}
-        <form method="POST" action="" enctype="multipart/form-data" id="formulario">
-            <div class="form-group">
-                {% csrf_token %} {{ form.as_p }}
-            </div>
-            <input type="submit" class="btn btn-primary btnwidth" id="id_guardar" value="Guardar">
-            <!-- <input type="reset" class="btn btn-primary btnwidth" id="id_nuevo" value="Nuevo"> -->
-            <a class="btn btn-success btnwidth" href="{% url 'vehiculo' 'ins' -1 %}">Nuevo</a>
-            {% if id != '-1' %}
-            <a class="btn btn-danger btnwidth" href="{% url 'vehiculo' 'del' id %}">Eliminar</a>
-            {% endif %}
-            <a class="btn btn-info btnwidth" href="{% url 'home' %}">Inicio</a>
-            {% if mesg %}
-            <div id="form_message" class="alert alert-danger" role="alert">{{ mesg }}</div>
-            {% endif %}
-        </form>
-        {% endif %}
-        {% if list %}
-        <table id="tabla_datos">
-            <thead>
-                <tr>
-                    <th>Patente</th>
-                    <th>Marca</th>
-                    <th>Modelo</th>
-                    <th>Imagen</th>
-                    <th>servicio</th>
-                    <th>detalle_servicio</th>
-                    <th>Categoría</th>
-                    <th class="titulo_boton">Editar</th>
-                    <th class="titulo_boton">Eliminar</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for ve in list %}
-                <tr>
-                    <td>{{ ve.patente }}</td>
-                    <td>{{ ve.marca }}</td>
-                    <td>{{ ve.modelo }}</td>
-                    <td><img src="/media/{{ ve.imagen }}" class="mini_auto" alt=""></td>
-                    <td>{{ ve.servicio }}</td>
-                    <td>{{ ve.detalle_servicio }}</td>
-                    <td>{{ ve.categoria }}</td>
-                    <td><a href="{% url 'vehiculo' 'upd' ve.patente %}" 
-                        class="btn btn-primary btn-sm boton_chico">Editar</a></td>
-                    <td><a href="{% url 'vehiculo' 'del' ve.patente %}" 
-                        class="btn btn-danger btn-sm boton_chico">Eliminar</a></td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-        {% endif %}
         <br>
-        <a href="{% url 'poblar_bd' %}" class="btn btn-info btn-sm">Poblar BD</a>
-        <a href="http://127.0.0.1:8000/admin" class="btn btn-info btn-sm">Administración</a>
-        <a href="{% url 'home' %}" class="btn btn-info btn-sm">Home page</a>
     </div>
 </body>
 </html>

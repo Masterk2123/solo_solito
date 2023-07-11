@@ -40,15 +40,15 @@
     </ul>
     </div>
 </nav>
-    <div class="container">
-        <h1 style="text-align: center !important;">
+<div class="container">
+    <h1 style="text-align: center !important;">
             Catalogo de productos
-        </h1>
-        <br><br>
-        <div class="container-fluid">
-            <div class="row text-center">
+    </h1>
+    <br><br>
+    <div class="container-fluid">
+        <div class="row text-center">
                 <div class="mx-auto col-sm-12 col-md-6 col-lg-6 col-xl-6 ficha_auto_recuadro">
-                    <img src="/media/{{ producto.imagen }}" class="ficha_auto_imagen" alt="">
+                    <img src="/media/{{ producto.imagen }}" class="ficha_auto_imagen" alt="Imagen" height="340px" width="380px">
                 </div>
                 <div class="mx-auto col-sm-12 col-md-6 col-lg-6 col-xl-6 ficha_datos_recuadro">
                     <h1>
@@ -60,36 +60,6 @@
                     <h3>
                         id_producto: {{ producto.id_producto }}
                     </h2>
-                </div>
-            </div>
-        </div>
-    </div>
-        <div class="container">
-        <h1 style="text-align: center !important;">
-            Servicio Taller Mecanico
-        </h1>
-        <br><br>
-        <div class="container-fluid">
-            <div class="row text-center">
-                <div class="mx-auto col-sm-12 col-md-6 col-lg-6 col-xl-6 ficha_auto_recuadro">
-                    <img src="/media/{{ vehiculo.imagen }}" class="ficha_auto_imagen" alt="">
-                </div>
-                <div class="mx-auto col-sm-12 col-md-6 col-lg-6 col-xl-6 ficha_datos_recuadro">
-                    <h1>
-                        Marca: {{ vehiculo.marca }}<br><br>
-                    </h1>
-                    <h2>
-                        Modelo: {{ vehiculo.modelo }}<br><br>
-                    </h2>
-                    <h3>
-                        Patente: {{ vehiculo.patente }}<br><br>
-                    </h3>
-                    <h4>
-                        servicio: {{ vehiculo.servicio }}<br><br>
-                    </h4>
-                    <h5>
-                        detalle_servicio: {{ vehiculo.detalle_servicio }}<br><br>
-                    </h5>
                 </div>
             </div>
         </div>

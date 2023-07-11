@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="icon" href={% static 'core/icon/png-transparent-logo-car-workshop-yamaha-hand-sports-equipment-fictional-character-thumbnail.png'%}>
     <meta charset="UTF-8">
     <meta content="dark" name="color-scheme">
     <meta content="origin" name="referrer">
@@ -17,15 +18,22 @@
         <link rel="stylesheet"  href="{% static 'core/css/style.css'%}" type="text/css">
       </head>
 <body id="fondo">
-  <nav class="navbar navbar-expand navbar-dark bg-dark" id="navcolor">
-    <div class="container">
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <img src={% static 'core/icon/logo.jpg'%} width="185" height="50"></a>
+    <div class="container" inner>
     <a class="navbar-brand" href="{% url 'home' %}">Inicio</a>
     <ul class="navbar-nav">
         <li class="nav-item">
         <a class="nav-link" href="{% url 'producto' 'ins' -1 %}">Productos</a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{% url 'vehiculo' 'ins' -1 %}">Vehiculos</a>
+        </li>
+        <li class="nav-item">
         <a class="nav-link" href="{% url 'tienda_producto' %}">Tienda</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'vehiculo_tienda' %}">Servicio</a>
         </li>
         <li class="nav-item">
         <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>

@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>registro</title>
-    <link rel="icon" href={% static 'core/icon/home.png'%}>
+    <link rel="icon" href={% static 'core/icon/png-transparent-logo-car-workshop-yamaha-hand-sports-equipment-fictional-character-thumbnail.png'%}>
     <!--ACA SE LINKEA CDN DE BOOTSTRAP-->
     <link 
         rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -22,28 +22,35 @@
 </head>
 <body id="fondo">
     <!--ACA COLOCAMOS EL NAVBAR-->
-  <nav class="navbar navbar-expand navbar-dark bg-dark">
-    <div class="container">
-    <a class="navbar-brand" href="{% url 'home' %}">Inicio</a>
-    <ul class="navbar-nav">
-        <li class="nav-item">
-        <a class="nav-link" href="{% url 'producto' 'ins' -1 %}">Productos</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="{% url 'tienda_producto' %}">Tienda</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
-        </li>
-        <li class="nav-item">
-        <a href="{% url 'sesion' %}" class="btn btn-outline-success">Login</a>
-        </li>
-        <li class="nav-item">
-            <a href="{% url 'registro' %}" class="btn btn-outline-info">Registro</a>
-        </li>
-    </ul>
-    </div>
-</nav>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <img src={% static 'core/icon/logo.jpg'%} width="185" height="50"></a>
+      <div class="container" inner>
+      <a class="navbar-brand" href="{% url 'home' %}">Inicio</a>
+      <ul class="navbar-nav">
+          <li class="nav-item">
+          <a class="nav-link" href="{% url 'producto' 'ins' -1 %}">Productos</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'vehiculo' 'ins' -1 %}">Vehiculos</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="{% url 'tienda_producto' %}">Tienda</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'vehiculo_tienda' %}">Servicio</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+          </li>
+          <li class="nav-item">
+          <a href="{% url 'sesion' %}" class="btn btn-outline-success">Login</a>
+          </li>
+          <li class="nav-item">
+              <a href="{% url 'registro' %}" class="btn btn-outline-info">Registro</a>
+          </li>
+      </ul>
+      </div>
+  </nav>
       <!-- REGISTRO!! -->
     
   <div class="container">

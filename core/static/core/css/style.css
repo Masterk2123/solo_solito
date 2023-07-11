@@ -1,13 +1,10 @@
 #navcolor {
-  background: rgb(0, 0, 0);
-  background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  background: #f2f2f2;
 }
 
 #navletra {
-  color: #00ff00; /* Verde brillante */
+  color: #333333; /* Color de texto más oscuro */
 }
-
-
 
 .carousel-item img {
   width: 500px;
@@ -18,13 +15,9 @@
   height: 610px;
   width: 750px;
   padding: 30px;
-  background: rgb(0, 0, 0);
-  background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  background: #f2f2f2;
   border-radius: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin: 10px;
 }
 
 #logincolor {
@@ -34,35 +27,28 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgb(0, 0, 0);
-  background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  background: #f2f2f2;
   border-radius: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin: 10px;
 }
 
 #error {
   color: #ffffff; /* Blanco */
-  background-color: #ff0000; /* Rojo */
+  background-color: #ff3333; /* Rojo más claro */
   height: auto;
   width: auto;
 }
 
 #success {
   color: #ffffff; /* Blanco */
-  background-color: #00ff00; /* Verde brillante */
+  background-color: #00cc00; /* Verde más suave */
   height: auto;
   width: auto;
 }
 
 #fondo {
-  background: rgb(0, 0, 0);
-  background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 75%);
+  background: #f2f2f2;
 }
-
-
 
 #contenedorgr {
   display: flex;
@@ -73,10 +59,9 @@
   left: 0;
   right: 0;
   padding: 10px;
-  background-color: #00ff00; /* Verde brillante */
+  background-color: #00cc00; /* Verde más suave */
 }
 
 #contenedorpq {
   width: 30%;
 }
-

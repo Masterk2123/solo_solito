@@ -103,9 +103,9 @@ def poblar_pro(request):
 
 def poblar_ve(request):
     Vehiculo.objects.all().delete()
-    Vehiculo.objects.create(patente="SCAR47", marca='Mustang', modelo="Mustang de 1970", imagen="images/mustang.jpg",servicio="Suspension y Direccion",detalle_servicio="arreglo", categoria=Categoria.objects.get(idCategoria=2))
-    Vehiculo.objects.create(patente="TIRO98", marca='Mercedes-Benz', modelo="Iron Bike de 1998", imagen="images/motoiron.jpg",servicio="Suspension y Direccion",detalle_servicio="arreglo", categoria=Categoria.objects.get(idCategoria=3))
-    Vehiculo.objects.create(patente="UVAM20", marca='Silver Plus', modelo="Silver de 2000", imagen="images/silver.jpg",servicio="Suspension y Direccion",detalle_servicio="arreglo", categoria=Categoria.objects.get(idCategoria=3))
+    Vehiculo.objects.create(patente="SCAR47", marca='Mustang', modelo="Mustang de 1970", imagen="images/mustang.jpg",servicio="Calibración del ángulo de dirección",detalle_servicio="arreglo", categoria=Categoria.objects.get(idCategoria=2))
+    Vehiculo.objects.create(patente="TIRO98", marca='Mercedes-Benz', modelo="Iron Bike de 1998", imagen="images/motoiron.jpg",servicio="Revisión eléctrica moto",detalle_servicio="arreglo", categoria=Categoria.objects.get(idCategoria=3))
+    Vehiculo.objects.create(patente="UVAM20", marca='Silver Plus', modelo="Silver de 2000", imagen="images/silver.jpg",servicio="cambio de aceite moto",detalle_servicio="arreglo", categoria=Categoria.objects.get(idCategoria=3))
     return redirect(vehiculo, action='ins', id = '-1')  
 
 

@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href={% static 'core/icon/png-transparent-logo-car-workshop-yamaha-hand-sports-equipment-fictional-character-thumbnail.png'%}>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +20,8 @@
 </head>
 <body>
     <nav class="navbar navbar-expand navbar-dark bg-dark">
-        <div class="container">
+        <img src={% static 'core/icon/logo.jpg'%} width="185" height="50"></a>
+        <div class="container" inner>
         <a class="navbar-brand" href="{% url 'home' %}">Inicio</a>
         <ul class="navbar-nav">
             <li class="nav-item">
@@ -48,13 +50,13 @@
     </nav>
     <div class="container">
         <h1 style="text-align: center !important;">
-            Servicios Realizados Taller Mecanico
+            Servicios Realizados Taller 
         </h1>
         <br><br>
         {% if list %}
             <div class="row">
             {% for ve in list %}
-                <a href="{% url 'vehiculo_ficha' ve.patente %}">
+                <a href="{% url 'contacto'  %}">
                     <div class="tienda_auto_recuadro">
                         <div class="tienda_auto_recuadro_interior">
                             <img src="/media/{{ ve.imagen }}" class="tienda_auto_imagen" alt=""height="340px" width="380px">
@@ -71,6 +73,7 @@
             {% endfor %}
             </div>
         {% endif %}
+        <br>
         <div class="tienda_link_home">
             <a href="{% url 'home' %}" class="btn btn-info btn-sm">Volver pagina de inicio</a>
         </div>
